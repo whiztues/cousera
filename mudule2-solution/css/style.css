@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: aliceblue;
+}
+
+
+h1 {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+div {
+    background-color: gray;
+    border: 3px solid black;
+    margin: 10px;
+    width: 33.33%;
+    height: 33.33%;
+    float: left;
+
+}
+
+/* Placing the div boxes at the center */
+section {
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* Floating the  titles to the right on each div tag */
+h3 {
+    float: right;
+    margin-top: 0;
+    width: 100px;
+    text-align: center;
+
+
+}
+
+/* Applying some styling on the titles */
+
+.first>h3 {
+    background-color: pink;
+    border: 2px solid black;
+}
+
+.second>h3 {
+    background-color: #ff000079;
+    color: white;
+    border: 2px solid black;
+}
+
+.third>h3 {
+    background-color: rgba(255, 166, 0, 0.668);
+    border: 2px solid black;
+
+}
+
+/* Stopped the floating from the title so it doesnot have effect on the paragraph */
+p {
+    clear: right;
+    padding: 10px;
+
+}
+
+/* Media queries for different screen size */
+@media (min-width: 992px) {
+    div {
+        width: 33.33%;
+        height: 33.33%;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .first,
+    .second {
+        width: 50%;
+        height: 50%;
+    }
+
+    .third {
+        width: 97.5%;
+        height: 70%;
+        position: absolute;
+        top: 200px;
+
+
+    }
+
+}
+
+@media (max-width: 767px) {
+    div {
+        width: 80%;
+        float: left;
+
+    }
+
+    .second {
+        height: 80%;
+        position: absolute;
+        top: 200px;
+
+    }
+
+    .third {
+        height: 80%;
+        position: absolute;
+        top: 380px;
+    }
+
+}
